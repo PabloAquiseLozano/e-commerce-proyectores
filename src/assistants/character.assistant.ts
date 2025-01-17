@@ -1,5 +1,6 @@
 import {CreateAssistantDTO} from "@vapi-ai/web/dist/api";
 
+
 export const characterAssistant: CreateAssistantDTO = {
   name: "Mary",
   language:"es",
@@ -7,6 +8,7 @@ export const characterAssistant: CreateAssistantDTO = {
     provider: "openai",
     model: "gpt-3.5-turbo",
     temperature: 0.7,
+    // @ts-ignore
     systemPrompt:
       "Eres un asistente encargado dar acceso a catálogo, verificando primero los datos proporcionados por ellos. Antes de proporcionar precio, debes confirmar los NOMBRE coinciden con los registros. Si los datos son correctos, entrega el la información de acceso. \n" +
         "Los datos disponibles son\n" +

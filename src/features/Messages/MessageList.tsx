@@ -12,7 +12,6 @@ interface MessageListProps {
 }
 
 export function MessageList({ messages, activeTranscript }: MessageListProps) {
-  console.log("messages", messages);
   return (
     <>
       {messages.map((message, index) =>
