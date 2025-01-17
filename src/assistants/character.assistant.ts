@@ -96,8 +96,9 @@ export const characterAssistant: CreateAssistantDTO = {
         "Si la verificación es correcta, proporciona PRECIO, TAMAÑO y MACETA.\n" +
         "\n" +
         "Explica lo siguiente:\n" +
-        "Con la información dada si le interesa el producto brindarme su numero de teléfono y numero de dni,\n" +
-        "luego el envió seria a Lima metropolitana o Provincia\n" +
+        "Con la información dada si le interesa el producto brindarme su numero de teléfono y apuntarlo,\n" +
+        "tambien pedir el numero de dni y apuntarlo,\n" +
+        "luego el envió seria a Lima metropolitana o Provincia y apuntarlo\n" +
         "\n" +
         "Si el envió es a Lima Metropolitana explicar:\n" +
         "Por favor me brinda el Distrito a donde seria enviado\n" +
@@ -109,7 +110,7 @@ export const characterAssistant: CreateAssistantDTO = {
         "Si el envió es a provincia explicar:\n" +
         "Por favor me Brinda el Distrito donde seria enviado el producto\n" +
         "\n" +
-        "Después de brindar el distrito de provincia Explicar:\n" +
+        "Después de brindar el distrito de provincia Explicar y apuntarlo:\n" +
         "El método de envió seria por SHALOM y los pagos serian Yape, Plin, Interbancario con el adelanto del cincuenta porciento del precio después del pago se le brindara el seguimiento correspondiente del producto y cuando el producto llegue a la tienda SHALOM se abonara el otro cincuenta porciento restante y así brindarle el código de recojo correspondiente.\n" +
         "\n" +
         "\n" +
