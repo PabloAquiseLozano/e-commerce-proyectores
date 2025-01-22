@@ -63,7 +63,7 @@ export const OtherProductsSection = ({ products }: Props) => {
                 <Link key={index} to={`/products/${product.id}`}>
                   <div
                     key={index}
-                    className="card bg-gray-100 w-full h-[25em]  grid grid-rows-[1fr,4em]"
+                    className="card bg-gray-100 w-full h-[20em]  grid grid-rows-[1fr,4em]"
                   >
                     <div
                       onMouseEnter={() => setProductHovered(product)}
