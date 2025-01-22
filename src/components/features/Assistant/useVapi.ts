@@ -41,15 +41,6 @@ export function useVapi() {
 
     const onCallEnd = () => {
       console.log("Call has stopped");
-      // @ts-ignore
-      console.log(
-        "messages: ",
-        messages.filter(
-          (message) =>
-            ["assistant", "user"].includes(message?.role) &&
-            message.type === "transcript",
-        ),
-      );
       setCallStatus(CALL_STATUS.INACTIVE);
     };
 

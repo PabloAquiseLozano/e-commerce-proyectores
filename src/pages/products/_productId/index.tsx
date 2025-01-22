@@ -3,7 +3,7 @@ import { Products } from "@/data-list";
 import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
 import { PillBottle } from "lucide-react";
 
-export const Product = () => {
+export const Product = (): any => {
   const { productId } = useParams();
   const navigate = useNavigate();
 
