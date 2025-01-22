@@ -1,8 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 import { Products } from "@/data-list";
 import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
-import React from "react";
-import { Pill, PillBottle } from "lucide-react";
+import { PillBottle } from "lucide-react";
 
 export const Product = () => {
   const { productId } = useParams();
