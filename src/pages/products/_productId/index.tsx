@@ -49,7 +49,7 @@ export const Product = () => {
                 </li>
                 <li>
                   <div className="text-[1.2em] text-black my-3">
-                    {!product.maceta && (
+                    {product.maceta && (
                       <span className="flex gap-2">
                         Incluye maceta <PillBottle className="text-black" />
                       </span>
