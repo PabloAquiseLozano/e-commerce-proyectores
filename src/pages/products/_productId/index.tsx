@@ -44,14 +44,18 @@ export const Product = (): any => {
                 </li>
                 <li>
                   <span className="text-[1.2em] bg-secondary p-2 px-6 rounded-full text-white">
-                    Tamaño: {product.size}{" "}
+                    Tamaño: {product.size} CM
                   </span>
                 </li>
                 <li>
                   <div className="text-[1.2em] text-black my-3">
-                    {product.maceta && (
+                    {product?.maceta ? (
                       <span className="ty-forum flex gap-2">
                         Incluye maceta <PillBottle className="text-black" />
+                      </span>
+                    ) : (
+                      <span className="ty-forum flex gap-2">
+                        No incluye maceta <PillBottle className="text-black" />
                       </span>
                     )}
                   </div>
