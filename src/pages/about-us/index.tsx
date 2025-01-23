@@ -16,7 +16,7 @@ export const AboutUs = () => {
           }}
         >
           <div className="mb-3">
-            <h1 className="text-[2.2em] font-medium text-center leading-[1em] mb-3">
+            <h1 className="ty-forum text-[2.2em] font-medium text-center leading-[1em] mb-3">
               SOBRE NOSOTROS
             </h1>
           </div>

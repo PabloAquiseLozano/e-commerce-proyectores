@@ -1,7 +1,12 @@
 import { Router } from "@/router";
+import { ScrollTop } from "@/ScrollTop.tsx";
 
 function App() {
-  return <Router />;
+  return (
+    <ScrollTop>
+      <Router />
+    </ScrollTop>
+  );
 }
 
 export default App;

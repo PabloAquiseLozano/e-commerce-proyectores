@@ -18,7 +18,7 @@ export const ContactPage = () => {
         >
           <div className="w-full px-4 mb-10">
             <div className="mb-3">
-              <h1 className="text-[2.2em] font-medium text-center">
+              <h1 className="ty-forum text-[2.2em] font-medium text-center">
                 Contactanos
               </h1>
             </div>
@@ -44,7 +44,7 @@ export const ContactPage = () => {
             </div>
           </div>
           <div className="mb-3">
-            <h1 className="text-[2.2em] font-medium text-center leading-[1em] mb-3">
+            <h1 className="ty-forum text-[2.2em] font-medium text-center leading-[1em] mb-3">
               Nuestas redes sociales
             </h1>
           </div>

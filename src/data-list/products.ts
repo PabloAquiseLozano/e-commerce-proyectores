@@ -1,3 +1,5 @@
+const hostingUrl = "https://eterna-verde.web.app/";
+
 export const Products: Product[] = [
   {
     id: "platanera-artificial-150-cm",
@@ -14,6 +16,7 @@ export const Products: Product[] = [
       "/images/platanero-4.webp",
     ],
     isBestSeller: true,
+    link: `${hostingUrl}/products/platanera-artificial-150-cmplatanera-artificial-150-cm`,
   },
   {
     id: "dracena-artificial-120-cm",
@@ -29,6 +32,7 @@ export const Products: Product[] = [
       "/images/dracena-3.webp",
     ],
     isBestSeller: true,
+    link: `${hostingUrl}/products/dracena-artificial-120-cm`,
   },
   {
     id: "ficus-artificial-180-cm",
@@ -44,9 +48,10 @@ export const Products: Product[] = [
       "/images/ficus-3.webp",
     ],
     isBestSeller: true,
+    link: `${hostingUrl}/products/ficus-artificial-180-cm`,
   },
   {
-    id: "ficus-elastica-90.webp",
+    id: "ficus-elastica-90",
     name: "Ficus elastica 90 cm",
     oldPrice: 120,
     price: 90,
@@ -58,6 +63,7 @@ export const Products: Product[] = [
       "/images/ficus-elastica-90-2.webp",
       "/images/ficus-elastica-90-3.webp",
     ],
+    link: `${hostingUrl}/products/ficus-elastica-90`,
   },
   {
     id: "palmera-165",
@@ -72,6 +78,7 @@ export const Products: Product[] = [
       "/images/palmera-165-2.webp",
       "/images/palmera-165-3.webp",
     ],
+    link: `${hostingUrl}/products/palmera-165`,
   },
   {
     id: "colgante-artificial",
@@ -82,6 +89,7 @@ export const Products: Product[] = [
     size: "90 cm",
     maceta: false,
     images: ["/images/colgante-artificial.webp"],
+    link: `${hostingUrl}/products/colgante-artificial`,
   },
   {
     id: "colgante-artificial-de-helecho",
@@ -95,6 +103,7 @@ export const Products: Product[] = [
       "/images/colgante-artificial-de-helecho.webp",
       "/images/colgante-artificial-de-helecho-2.webp",
     ],
+    link: `${hostingUrl}/products/colgante-artificial-de-helecho`,
   },
   {
     id: "monstera-artificial-160",
@@ -110,6 +119,7 @@ export const Products: Product[] = [
       "/images/monstera-artificial-160-3.webp",
       "/images/monstera-artificial-160-4.webp",
     ],
+    link: `${hostingUrl}/products/monstera-artificial-160`,
   },
   {
     id: "dracena-artificial-105",
@@ -124,6 +134,7 @@ export const Products: Product[] = [
       "/images/dracena-artificial-105-2.webp",
       "/images/dracena-artificial-105-3.webp",
     ],
+    link: `${hostingUrl}/products/dracena-artificial-105`,
   },
   {
     id: "bambu-artificial-minimal-210",
@@ -139,6 +150,7 @@ export const Products: Product[] = [
       "/images/bambu-artificial-minimal-210-3.webp",
       "/images/bambu-artificial-minimal-210-4.webp",
     ],
+    link: `${hostingUrl}/products/bambu-artificial-minimal-210`,
   },
   {
     id: "eucalipto-artificial-105",
@@ -154,6 +166,7 @@ export const Products: Product[] = [
       "/images/eucalipto-artificial-105-3.webp",
       "/images/eucalipto-artificial-105-4.webp",
     ],
+    link: `${hostingUrl}/products/eucalipto-artificial-105`,
   },
   {
     id: "almendro-artificial-180",
@@ -169,6 +182,7 @@ export const Products: Product[] = [
       "/images/almendro-artificial-180-3.webp",
       "/images/almendro-artificial-180-4.webp",
     ],
+    link: `${hostingUrl}/products/almendro-artificial-180`,
   },
   {
     id: "ave-paraiso-artificial-210",
@@ -183,6 +197,7 @@ export const Products: Product[] = [
       "/images/ave-paraiso-artificial-210-2.webp",
       "/images/ave-paraiso-artificial-210-3.webp",
     ],
+    link: `${hostingUrl}/products/ave-paraiso-artificial-210`,
   },
   {
     id: "sakura-mini-rojo",
@@ -193,6 +208,7 @@ export const Products: Product[] = [
     size: "100 cm",
     maceta: true,
     images: ["/images/sakura-rojo.jpg", "/images/sakura-rojo-2.jpg"],
+    link: `${hostingUrl}/products/sakura-mini-rojo`,
   },
   {
     id: "sakura-mini-rosado",
@@ -203,5 +219,6 @@ export const Products: Product[] = [
     size: "100 cm",
     maceta: false,
     images: ["/images/sakura-rosa.jpg", "/images/sakura-rosa-2.jpg"],
+    link: `${hostingUrl}/products/sakura-mini-rosado`,
   },
 ];

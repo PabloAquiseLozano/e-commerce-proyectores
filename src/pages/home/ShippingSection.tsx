@@ -6,7 +6,7 @@ export const ShippingSection = () => {
       <WrapperContainer>
         <div className="w-full p-6">
           <div className="w-full sm:w-[80%] m-auto">
-            <h3 className="text-[2em] text-center text-white mb-10 leading-[1em]">
+            <h3 className="ty-forum text-[2em] text-center text-white mb-10 leading-[1em]">
               Hacemos envios a todo el Perú
             </h3>
             <div className="flex gap-10 flex-wrap justify-center">

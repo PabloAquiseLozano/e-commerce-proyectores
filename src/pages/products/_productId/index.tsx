@@ -32,7 +32,7 @@ export const Product = (): any => {
             <div className="content pt-[2em] sm:sticky sm:top-2">
               <ul className="grid gap-5 mb-[2em]">
                 <li>
-                  <h1 className="text-[3em] font-light leading-[1em]">
+                  <h1 className="ty-forum text-[3em] font-light leading-[1em]">
                     {product.name}
                   </h1>
                 </li>
@@ -50,7 +50,7 @@ export const Product = (): any => {
                 <li>
                   <div className="text-[1.2em] text-black my-3">
                     {product.maceta && (
-                      <span className="flex gap-2">
+                      <span className="ty-forum flex gap-2">
                         Incluye maceta <PillBottle className="text-black" />
                       </span>
                     )}

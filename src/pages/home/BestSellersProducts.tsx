@@ -13,7 +13,7 @@ export const BestSellersProducts = ({ products }: Props) => {
     <WrapperContainer>
       <div className="w-full h-auto my-[4em]">
         <div className="title px-4">
-          <h2 className="text-[2.5em] font-medium text-center mb-8 leading-[1em]">
+          <h2 className="ty-forum text-[2.5em] font-medium text-center mb-8 leading-[1em]">
             Productos mas vendidos
           </h2>
         </div>

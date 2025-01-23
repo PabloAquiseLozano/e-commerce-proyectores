@@ -15,4 +15,5 @@ interface Product {
   maceta: boolean;
   images: string[];
   isBestSeller?: boolean;
+  link: string;
 }

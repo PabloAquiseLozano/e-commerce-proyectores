@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Quicksand:wght@300..700&family=Rufina:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Urbanist", serif;
+}
+
+.ty-forum {
+  font-family: "Forum", serif;
+  font-weight: 600;
+}

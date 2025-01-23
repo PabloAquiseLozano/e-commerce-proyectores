@@ -19,7 +19,7 @@ export const OtherProductsSection = ({ products }: Props) => {
     <WrapperContainer>
       <div className="w-full h-auto my-[4em]">
         <div className="title">
-          <h2 className="text-[2.5em] font-medium text-center mb-8 leading-[1em]">
+          <h2 className="ty-forum text-[2.5em] font-medium text-center mb-8 leading-[1em]">
             Mas productos
           </h2>
         </div>
