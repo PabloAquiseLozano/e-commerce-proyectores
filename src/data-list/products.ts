@@ -7,7 +7,7 @@ export const Products: Product[] = [
     oldPrice: 190,
     price: 170,
     stock: 10,
-    size: "150 cm",
+    size: 150,
     maceta: true,
     images: [
       "/images/platanero.webp",
@@ -24,7 +24,7 @@ export const Products: Product[] = [
     oldPrice: 210,
     price: 180,
     stock: 10,
-    size: "120 cm",
+    size: 120,
     maceta: true,
     images: [
       "/images/dracena.webp",
@@ -40,7 +40,7 @@ export const Products: Product[] = [
     oldPrice: 190,
     price: 170,
     stock: 10,
-    size: "180 cm",
+    size: 180,
     maceta: true,
     images: [
       "/images/ficus.webp",
@@ -56,7 +56,7 @@ export const Products: Product[] = [
     oldPrice: 120,
     price: 90,
     stock: 10,
-    size: "90 cm",
+    size: 90,
     maceta: false,
     images: [
       "/images/ficus-elastica-90.webp",
@@ -71,7 +71,7 @@ export const Products: Product[] = [
     oldPrice: 120,
     price: 90,
     stock: 10,
-    size: "90 cm",
+    size: 90,
     maceta: false,
     images: [
       "/images/palmera-165.webp",
@@ -83,10 +83,10 @@ export const Products: Product[] = [
   {
     id: "colgante-artificial",
     name: "Colgante artificial",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 100,
+    price: 70,
     stock: 10,
-    size: "90 cm",
+    size: 90,
     maceta: false,
     images: ["/images/colgante-artificial.webp"],
     link: `${hostingUrl}/products/colgante-artificial`,
@@ -97,7 +97,7 @@ export const Products: Product[] = [
     oldPrice: 120,
     price: 90,
     stock: 10,
-    size: "90 cm",
+    size: 90,
     maceta: false,
     images: [
       "/images/colgante-artificial-de-helecho.webp",
@@ -108,10 +108,10 @@ export const Products: Product[] = [
   {
     id: "monstera-artificial-160",
     name: "Monstera artificial 160 cm",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 130,
+    price: 100,
     stock: 10,
-    size: "90 cm",
+    size: 90,
     maceta: false,
     images: [
       "/images/monstera-artificial-160.webp",
@@ -124,10 +124,10 @@ export const Products: Product[] = [
   {
     id: "dracena-artificial-105",
     name: "Drácena artificial 105 cm",
-    oldPrice: 120,
+    oldPrice: 110,
     price: 90,
     stock: 10,
-    size: "105 cm",
+    size: 105,
     maceta: false,
     images: [
       "/images/dracena-artificial-105.webp",
@@ -139,10 +139,10 @@ export const Products: Product[] = [
   {
     id: "bambu-artificial-minimal-210",
     name: "Bambu artificial minimal 210 cm",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 140,
+    price: 110,
     stock: 10,
-    size: "210 cm",
+    size: 210,
     maceta: false,
     images: [
       "/images/bambu-artificial-minimal-210.webp",
@@ -155,10 +155,10 @@ export const Products: Product[] = [
   {
     id: "eucalipto-artificial-105",
     name: "Eucalipto artificial 105 cm",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 100,
+    price: 80,
     stock: 10,
-    size: "105 cm",
+    size: 105,
     maceta: false,
     images: [
       "/images/eucalipto-artificial-105.webp",
@@ -171,10 +171,10 @@ export const Products: Product[] = [
   {
     id: "almendro-artificial-180",
     name: "Almendro artificial 180 cm",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 150,
+    price: 120,
     stock: 10,
-    size: "180 cm",
+    size: 180,
     maceta: false,
     images: [
       "/images/almendro-artificial-180.webp",
@@ -187,10 +187,10 @@ export const Products: Product[] = [
   {
     id: "ave-paraiso-artificial-210",
     name: "Ave paraiso artificial 210 cm",
-    oldPrice: 120,
-    price: 90,
+    oldPrice: 140,
+    price: 110,
     stock: 10,
-    size: "210 cm",
+    size: 210,
     maceta: false,
     images: [
       "/images/ave-paraiso-artificial-210.webp",
@@ -202,10 +202,10 @@ export const Products: Product[] = [
   {
     id: "sakura-mini-rojo",
     name: "Sakura mini rojo",
-    oldPrice: 80,
-    price: 70,
+    oldPrice: 160,
+    price: 140,
     stock: 10,
-    size: "100 cm",
+    size: 100,
     maceta: true,
     images: ["/images/sakura-rojo.jpg", "/images/sakura-rojo-2.jpg"],
     link: `${hostingUrl}/products/sakura-mini-rojo`,
@@ -213,10 +213,10 @@ export const Products: Product[] = [
   {
     id: "sakura-mini-rosado",
     name: "Sakura mini rosado",
-    oldPrice: 80,
-    price: 70,
+    oldPrice: 160,
+    price: 140,
     stock: 10,
-    size: "100 cm",
+    size: 100,
     maceta: false,
     images: ["/images/sakura-rosa.jpg", "/images/sakura-rosa-2.jpg"],
     link: `${hostingUrl}/products/sakura-mini-rosado`,

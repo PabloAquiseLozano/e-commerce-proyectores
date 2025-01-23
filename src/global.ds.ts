@@ -11,7 +11,7 @@ interface Product {
   oldPrice?: number;
   price: number;
   stock: number;
-  size: string;
+  size: number;
   maceta: boolean;
   images: string[];
   isBestSeller?: boolean;

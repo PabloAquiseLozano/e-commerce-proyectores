@@ -5,7 +5,7 @@ function CharacterPreview() {
     <div>
       <div className="border rounded-lg w-full mb-5 h-auto p-2">
         <h1 className="text-[1.1em] text-center w-full text-white font-bold mb-3">
-          Detalles del pedido
+          Detalles de la conversación
         </h1>
         <CharacterDetails />
       </div>
