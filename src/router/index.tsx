@@ -3,6 +3,7 @@ import { BaseLayout } from "@/components/layout";
 import {
   AboutUs,
   ContactPage,
+  ConversationsPage,
   HomePage,
   Page404,
   Product,
@@ -52,6 +53,7 @@ export const Router = () => {
           </BaseLayout>
         }
       />
+      <Route path="/admin/conversations" element={<ConversationsPage />} />
       <Route path="*" element={<Page404 />} />
     </Routes>
   );

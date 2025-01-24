@@ -17,3 +17,14 @@ interface Product {
   isBestSeller?: boolean;
   link: string;
 }
+
+interface Message {
+  sender: "bot" | "user";
+  message: string;
+}
+
+interface Conversation {
+  createAt: any;
+  id: string;
+  messages: Message[];
+}

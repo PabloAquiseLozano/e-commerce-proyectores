@@ -14,7 +14,7 @@ export const querySnapshotToArray = <T extends DocumentData>(
 // ): Promise<Document<T>[]> => {
 //   const querySnapshot = await query.get();
 //
-//   return querySnapshotToArray<T>(querySnapshot);
+//   return querySnapshotToArray<T>(querySnapshot) ;
 // };
 //
 // export const fetchDocumentOnce = async <T extends DocumentData>(
@@ -30,6 +30,7 @@ export const querySnapshotToArray = <T extends DocumentData>(
 //   docRef: DocumentReference,
 //   document: T,
 // ): Promise<void> => docRef.set(document);
+
 //
 // export const updateDocument = async <T extends ObjectType>(
 //   docRef: DocumentReference,

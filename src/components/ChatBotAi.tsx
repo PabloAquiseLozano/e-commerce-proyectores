@@ -3,15 +3,16 @@ import { CharacterPreview } from "@/components/features/Character";
 import { ScrollArea } from "@/components/ui/ScrollArea.tsx";
 import { MessageList } from "@/components/features/Messages";
 import { useVapi, vapi, VapiButton } from "@/components/features/Assistant";
+import {
+  getConversationId,
+  setConversation,
+} from "@/firebase/collections/conversations.ts";
+import { TranscriptMessage } from "@/lib/types/conversation.type.ts";
+import moment from "moment";
 
 interface Props {
   showModal: boolean;
 }
-
-// interface WspMessage {
-//   sender: "bot" | "user";
-//   message: string;
-// }
 
 export const ChatBotAi = ({ showModal }: Props): React.ReactNode => {
   const scrollAreaRef = useRef<any>(null);
@@ -41,51 +42,36 @@ export const ChatBotAi = ({ showModal }: Props): React.ReactNode => {
     };
   });
 
-  // const sendMessagesToWhatsapp = async (wspMessage: WspMessage) => {
-  //   try {
-  //     const response = await axios.post(
-  //       `https://graph.facebook.com/v17.0/${WhatsappConfig.PHONE_NUMBER_ID}/messages`,
-  //       {
-  //         messaging_product: "whatsapp",
-  //         to: WhatsappConfig.RECIPIENT_PHONE_NUMBER,
-  //         type: "text",
-  //         text: { body: `${wspMessage.sender}: ${wspMessage.message}` },
-  //       },
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${WhatsappConfig.ACCESS_TOKEN_WSP}`,
-  //           "Content-Type": "application/json",
-  //         },
-  //       },
-  //     );
-  //     console.log("Message send:", response.data);
-  //   } catch (error) {
-  //     console.error("sendMessagesToWhatsappError: ", error);
-  //   }
-  // };
-
-  // const wspMessagesMap = (message: TranscriptMessage): WspMessage => ({
-  //   sender: message.role === "assistant" ? "bot" : "user",
-  //   message: message.transcript,
-  // });
+  const wspMessagesMap = (message: TranscriptMessage): Message => ({
+    sender: message.role === "assistant" ? "bot" : "user",
+    message: message.transcript,
+  });
 
   useEffect(() => {
     (async () => {
       if (showModal) {
         await start();
       } else {
-        // const _messages: TranscriptMessage[] = (
-        //   messages as TranscriptMessage[]
-        // ).filter((message) => {
-        //   return (
-        //     ["assistant", "user"].includes(message?.role) &&
-        //     message.type === "transcript"
-        //   );
-        // });
+        const _messages: TranscriptMessage[] = (
+          messages as TranscriptMessage[]
+        ).filter((message) => {
+          return (
+            ["assistant", "user"].includes(message?.role) &&
+            message.type === "transcript"
+          );
+        });
 
-        // const wspMessages: WspMessage[] = _messages.map((message) =>
-        //   wspMessagesMap(message),
-        // );
+        const wspMessages: Message[] = _messages.map((message) =>
+          wspMessagesMap(message),
+        );
+
+        const conversationId = getConversationId();
+
+        await setConversation(conversationId, {
+          id: conversationId,
+          messages: wspMessages,
+          createAt: moment(new Date()).format("YYYY-MM-DD HH:mm:ss"),
+        });
 
         stop();
       }
