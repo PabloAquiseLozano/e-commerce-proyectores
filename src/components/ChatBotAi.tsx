@@ -65,6 +65,11 @@ export const ChatBotAi = ({ showModal }: Props): React.ReactNode => {
           wspMessagesMap(message),
         );
 
+        if (
+          wspMessages.filter((message) => message.sender === "user").length <= 0
+        )
+          return stop();
+
         const conversationId = getConversationId();
 
         await setConversation(conversationId, {
