@@ -1,6 +1,5 @@
 interface Config {
   common: ConfigCommon;
-  development: ConfigEnvironment;
   production: ConfigEnvironment;
 }
 
