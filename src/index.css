@@ -5,10 +5,14 @@
 @tailwind utilities;
 
 body {
-  font-family: "Urbanist", serif;
+  font-family: "Lao Sangam MN", serif;
 }
 
 .ty-forum {
   font-family: "Forum", serif;
   font-weight: 600;
+}
+
+.autofill {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }

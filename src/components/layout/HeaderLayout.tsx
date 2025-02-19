@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const HeaderLayout = () => {
   return (
-    <header id="card-header">
+    <header id="card-header" className="bg-blue-950 text-white">
       <WrapperContainer>
         <div className="w-full h-auto md:h-[4em] flex flex-col md:flex-row justify-center md:justify-between flex-wrap place-items-center px-6">
           <Link to="/" className="flex items-center justify-start gap-[1em]">
@@ -14,10 +14,6 @@ export const HeaderLayout = () => {
               height={30}
               className="object-contain"
             />
-            <div className="text-[1.7em] font-medium">
-              <span className="text-secondary">Eterna</span>
-              <span className="text-primary"> verde</span>
-            </div>
           </Link>
           <div className="py-3">
             <ul className="list-none flex justify-end items-center gap-[1.5em] text-[.9em] md:text-[1.1em] font-light">

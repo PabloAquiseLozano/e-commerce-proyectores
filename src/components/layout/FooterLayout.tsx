@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const FooterLayout = (): React.ReactNode => {
   return (
-    <footer className="w-full h-auto py-4 bg-gray-100 grid place-items-center">
+    <footer className="w-full h-auto py-4 bg-blue-950 grid place-items-center text-white">
       <WrapperContainer>
         <div className="w-full px-5">
           <div className="logo my-8">
@@ -17,10 +17,6 @@ export const FooterLayout = (): React.ReactNode => {
                 height={30}
                 className="object-contain"
               />
-              <div className="text-[1.7em] font-medium">
-                <span className="text-secondary">Eterna</span>
-                <span className="text-primary"> verde</span>
-              </div>
             </div>
             <div className="flex flex-col items-center justify-center">
               <span className="text-[1.2em] font-medium mb-2">Contactanos</span>
@@ -29,22 +25,22 @@ export const FooterLayout = (): React.ReactNode => {
           </div>
           <div className="contact-list flex gap-5 justify-center flex-wrap">
             <a
-              href="https://eternaverde.com"
+              href="https://vantage-proyectores.com"
               rel="noreferrer"
               target="_blank"
               className="flex gap-2"
             >
-              <Globe /> eternaverde.com
+              <Globe /> vantage-proyectores.com
             </a>
             <a
-              href="mailto:contacto@eternaverde.com"
+              href="mailto:contacto@vantage-proyectores.com"
               rel="noreferrer"
               className="flex gap-2"
             >
-              <Mail /> contacto@eternaverde.com
+              <Mail /> contacto@vantage-proyectores.com
             </a>
-            <a href="tel:918560207" rel="noreferrer" className="flex gap-2">
-              <Phone /> 918 560 207
+            <a href="tel:972252744" rel="noreferrer" className="flex gap-2">
+              <Phone /> 972 252 744
             </a>
           </div>
           <div className="socials flex gap-6 justify-center flex-wrap my-5">
@@ -89,10 +85,11 @@ export const FooterLayout = (): React.ReactNode => {
         </div>
         <div className="w-full m-auto flex flex-col justify-center items-center gap-1 flex-wrap p-5 text-[.9em] text-center">
           <div>
-            © CopyRight 2025 - Eterna verde. Todos los derechos reservados
+            © CopyRight 2025 - Vantage Point Proyectores. Todos los derechos
+            reservados
           </div>
           <div>
-            Desarrollado por <strong>Los libertadores</strong>
+            Desarrollado por <strong>Servitec Group</strong>
           </div>
         </div>
       </WrapperContainer>

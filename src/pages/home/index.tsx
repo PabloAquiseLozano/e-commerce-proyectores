@@ -7,7 +7,7 @@ import { OtherProductsSection } from "@/pages/home/OtherProductsSection.tsx";
 import { ShippingSection } from "@/pages/home/ShippingSection.tsx";
 import { useDevice } from "@/hooks";
 
-const bannersCarousel = ["/images/banner-1.jpg", "/images/banner-2.jpg"];
+const bannersCarousel = ["/images/banner1.png", "/images/banner2.png"];
 const bannersCarouselMb = [
   "/images/banner-mb-1.jpg",
   "/images/banner-mb-2.jpg",

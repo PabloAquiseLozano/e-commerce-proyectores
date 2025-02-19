@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router";
 import { Products } from "@/data-list";
 import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
-import { PillBottle } from "lucide-react";
+import { Mouse, MouseOff } from "lucide-react";
 
 export const Product = (): any => {
   const { productId } = useParams();
@@ -36,26 +36,29 @@ export const Product = (): any => {
                     {product.name}
                   </h1>
                 </li>
+                <li className="mt-[2em] mb-[1.2em]">
+                  <span className="text-lg">{product.description}</span>
+                </li>
                 <li className="flex gap-2 items-center my-[1.2em]">
-                  <span className="text-[1.7em]">S/ {product.price}</span>
+                  <span className="text-[1.7em]">$ {product.price}</span>
                   <span className="text-[1em] line-through">
-                    S/ {product.oldPrice}
+                    $ {product.oldPrice}
                   </span>
                 </li>
                 <li>
-                  <span className="text-[1.2em] bg-secondary p-2 px-6 rounded-full text-white">
+                  <span className="text-[1.2em] bg-blue-950 p-2 px-6 rounded-full text-white">
                     Tamaño: {product.size} CM
                   </span>
                 </li>
                 <li>
                   <div className="text-[1.2em] text-black my-3">
-                    {product?.maceta ? (
+                    {product?.control ? (
                       <span className="ty-forum flex gap-2">
-                        Incluye maceta <PillBottle className="text-black" />
+                        Incluye control <Mouse className="text-black" />
                       </span>
                     ) : (
                       <span className="ty-forum flex gap-2">
-                        No incluye maceta <PillBottle className="text-black" />
+                        No incluye control <MouseOff className="text-black" />
                       </span>
                     )}
                   </div>

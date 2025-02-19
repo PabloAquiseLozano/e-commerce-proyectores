@@ -1,67 +1,82 @@
-import { BestSellersProducts } from "@/pages/home/BestSellersProducts.tsx";
 import { Products } from "@/data-list";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { ArrayParam, NumberParam, useQueryParams } from "use-query-params";
 import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
+import { FilterOptions } from "@/pages/products/filterOptions.tsx";
+import { Select } from "antd";
+import { ProductCard } from "@/pages/products/ProductCard.tsx";
+import { isEmpty } from "lodash";
 
 export const ProductsPage = () => {
-  const [productHovered, setProductHovered] = useState<Product | null>(null);
+  const [query, setQuery] = useQueryParams({
+    category: ArrayParam,
+    brand: ArrayParam,
+    minPrice: NumberParam,
+  });
 
-  const bestSellersProducts = Products.filter(
-    (product) => product.isBestSeller,
-  );
-  const othersProducts = Products.filter((product) => !product.isBestSeller);
+  const filters = {
+    category: query.category || [],
+    brand: query.brand || [],
+    minPrice: query.minPrice || 0,
+  };
+
+  const productsFiltered = (products: Product[]) => {
+    return products.filter((product) => {
+      return (
+        product.price >= filters.minPrice &&
+        (isEmpty(filters.brand) || filters.brand.includes(product.brand)) &&
+        (isEmpty(filters.category) ||
+          filters.category.includes(product.category))
+      );
+    });
+  };
+
+  const filteredProducts = productsFiltered(Products);
+
+  const sortByOptions = [
+    {
+      value: "minPrice",
+      label: "Precio más Bajo",
+    },
+    {
+      value: "maxPrice",
+      label: "Precio más Alto",
+    },
+    {
+      value: "brand",
+      label: "Marca",
+    },
+    {
+      value: "recommended",
+      label: "Recomendados",
+    },
+  ];
 
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto bg-gray-200">
       <WrapperContainer>
-        <div className="w-full h-auto">
-          <BestSellersProducts products={bestSellersProducts} />
-          <div className="w-full my-[2em]">
-            <div className="title">
-              <h2 className="ty-forum text-[2.5em] font-medium text-center mb-8 leading-[1em]">
-                Mas productos
-              </h2>
+        <div className="w-full h-auto flex gap-4 ">
+          <div className="btn-group bg-white flex my-[2em] p-[2em] rounded-3xl">
+            <FilterOptions filters={filters} setQuery={setQuery} />
+          </div>
+          <div className="w-full flex flex-col gap-[1em] my-[2em] rounded-3xl">
+            <div className="w-full bg-white rounded-2xl p-[1em] gap-4 flex">
+              <span>Ordenar por:</span>
+              <Select
+                style={{ width: 150 }}
+                defaultValue="recommended"
+                options={sortByOptions}
+              />
             </div>
-            <div className="flex flex-wrap justify-center gap-[1em]">
-              {othersProducts.map((product, index) => (
-                <Link key={index} to={`/products/${product.id}`}>
-                  <div
-                    key={index}
-                    className="card bg-gray-100 w-[25em] h-[25em]  grid grid-rows-[1fr,4em]"
-                  >
-                    <div
-                      onMouseEnter={() => setProductHovered(product)}
-                      onMouseLeave={() => setProductHovered(null)}
-                      className="w-full h-full relative overflow-hidden"
-                    >
-                      <img
-                        src={
-                          product.images.length > 1
-                            ? productHovered?.id === product.id
-                              ? product.images[1]
-                              : product.images[0]
-                            : product.images[0]
-                        }
-                        alt="plantas"
-                        className="w-full h-full object-cover absolute inset-0 z-20"
-                      />
-                    </div>
-                    <div className="title flex justify-center flex-col items-center px-5 py-2">
-                      <span className="font-light text-[1em]">
-                        {product.name} {product.size}
-                      </span>
-                      <div className="flex items-center gap-2 text-[.9em]">
-                        <span className="font-medium text-[1.1em] line-through">
-                          S/ {product.oldPrice}
-                        </span>
-                        <span className="font-medium text-[1.2em]">
-                          S/ {product.price}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+            <div className="w-full grid autofill gap-[1.9em]">
+              {filteredProducts.map((fProduct, index) => (
+                <ProductCard
+                  key={index}
+                  title={fProduct.name}
+                  brand={fProduct.brand}
+                  price={fProduct.price}
+                  oldPrice={fProduct.oldPrice}
+                  imageUrl={fProduct.images[0]}
+                />
               ))}
             </div>
           </div>

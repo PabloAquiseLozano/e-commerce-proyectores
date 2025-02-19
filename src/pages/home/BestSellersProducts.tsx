@@ -13,8 +13,8 @@ export const BestSellersProducts = ({ products }: Props) => {
     <WrapperContainer>
       <div className="w-full h-auto my-[4em]">
         <div className="title px-4">
-          <h2 className="ty-forum text-[2.5em] font-medium text-center mb-8 leading-[1em]">
-            Productos mas vendidos
+          <h2 className="text-[2.5em] font-medium text-center mb-8 leading-[1em]">
+            Productos más vendidos
           </h2>
         </div>
         <div className="w-full h-auto flex justify-center flex-wrap gap-4 px-4">
@@ -48,10 +48,10 @@ export const BestSellersProducts = ({ products }: Props) => {
                   <span className="font-light text-[1em]">{product.name}</span>
                   <div className="flex items-center gap-2 text-[.9em]">
                     <span className="font-medium text-[1.1em] line-through">
-                      S/ {product.oldPrice}
+                      $ {product.oldPrice}
                     </span>
                     <span className="font-medium text-[1.2em]">
-                      S/ {product.price}
+                      $ {product.price}
                     </span>
                   </div>
                 </div>

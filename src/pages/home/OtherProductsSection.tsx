@@ -88,10 +88,10 @@ export const OtherProductsSection = ({ products }: Props) => {
                       </span>
                       <div className="flex items-center gap-2 text-[.9em]">
                         <span className="font-medium text-[1.1em] line-through">
-                          S/ {product.oldPrice}
+                          $ {product.oldPrice}
                         </span>
                         <span className="font-medium text-[1.2em]">
-                          S/ {product.price}
+                          $ {product.price}
                         </span>
                       </div>
                     </div>

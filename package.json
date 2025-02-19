@@ -1,5 +1,5 @@
 {
-  "name": "eternaverde",
+  "name": "vantapoint",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "@headlessui/react": "^2.2.0",
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@vapi-ai/web": "^1.0.255",
+    "antd": "^5.24.0",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -33,7 +34,8 @@
     "styled-components": "^6.1.14",
     "swiper": "^11.2.1",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-query-params": "^2.2.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.14",

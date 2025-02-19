@@ -2,7 +2,7 @@ import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
 
 export const ShippingSection = () => {
   return (
-    <div className="w-full bg-primary">
+    <div className="w-full bg-gray-500">
       <WrapperContainer>
         <div className="w-full p-6">
           <div className="w-full sm:w-[80%] m-auto">

@@ -9,8 +9,7 @@ export const ContactPage = () => {
           className="w-full flex flex-col items-center justify-center h-auto min-h-[70svh] relative p-[2em] text-lime-50 bg-neutral-900"
           style={{
             backgroundBlendMode: "multiply",
-            background:
-              "url('/images/artificial-plants.webp'), rgba(0,0,0,0.6)",
+            background: "url('/images/sala-proyeccion.jpg'), rgba(0,0,0,0.6)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
@@ -19,27 +18,27 @@ export const ContactPage = () => {
           <div className="w-full px-4 mb-10">
             <div className="mb-3">
               <h1 className="ty-forum text-[2.2em] font-medium text-center">
-                Contactanos
+                Contáctanos
               </h1>
             </div>
             <div className="contact-list flex gap-10 justify-center flex-wrap text-[1.2em]">
               <a
-                href="https://eternaverde.com"
+                href="https://vantage-proyectores.com"
                 rel="noreferrer"
                 target="_blank"
                 className="flex gap-2"
               >
-                <Globe /> eternaverde.com
+                <Globe /> vantage-proyectores.com
               </a>
               <a
-                href="mailto:contacto@eternaverde.com"
+                href="mailto:contacto@vantage-proyectores.com"
                 rel="noreferrer"
                 className="flex gap-2"
               >
-                <Mail /> contacto@eternaverde.com
+                <Mail /> contacto@vantage-proyectores.com
               </a>
-              <a href="tel:918560207" rel="noreferrer" className="flex gap-2">
-                <Phone /> 918 560 207
+              <a href="tel:972252744" rel="noreferrer" className="flex gap-2">
+                <Phone /> 972 252 744
               </a>
             </div>
           </div>

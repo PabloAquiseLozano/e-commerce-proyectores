@@ -10,9 +10,12 @@ interface Product {
   name: string;
   oldPrice?: number;
   price: number;
+  brand: string;
+  category: string;
   stock: number;
   size: number;
-  maceta: boolean;
+  description: string;
+  control: boolean;
   images: string[];
   isBestSeller?: boolean;
   link: string;
@@ -27,4 +30,15 @@ interface Conversation {
   createAt: any;
   id: string;
   messages: Message[];
+}
+
+interface FilterOptions {
+  name: string;
+  label: string;
+  items: FilterOptionsItems[];
+}
+
+interface FilterOptionsItems {
+  label: string;
+  value: string;
 }
