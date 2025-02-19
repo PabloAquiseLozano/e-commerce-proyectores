@@ -16,12 +16,12 @@ export const ShippingSection = () => {
                 className="w-[6em] h-[6em] rounded-full"
               />
               <img
-                src="/images/shalom.png"
+                src="/images/shalom.jpeg"
                 alt="cruz del sur"
                 className="w-[6em] h-[6em] rounded-full"
               />
               <img
-                src="/images/mavisur.png"
+                src="/images/marvisur.png"
                 alt="cruz del sur"
                 className="w-[6em] h-[6em] rounded-full"
               />

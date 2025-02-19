@@ -79,7 +79,7 @@ export const OtherProductsSection = ({ products }: Props) => {
                             : product.images[0]
                         }
                         alt="plantas"
-                        className="w-full h-full object-cover absolute inset-0 z-20"
+                        className="w-full h-full object-contain absolute inset-0 z-20"
                       />
                     </div>
                     <div className="title flex justify-center flex-col items-center px-5 py-2">

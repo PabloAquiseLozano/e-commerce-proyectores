@@ -9,7 +9,7 @@ export const ContactPage = () => {
           className="w-full flex flex-col items-center justify-center h-auto min-h-[70svh] relative p-[2em] text-lime-50 bg-neutral-900"
           style={{
             backgroundBlendMode: "multiply",
-            background: "url('/images/sala-proyeccion.jpg'), rgba(0,0,0,0.6)",
+            background: "url('/images/salaproyeccion.jpg'), rgba(0,0,0,0.6)",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

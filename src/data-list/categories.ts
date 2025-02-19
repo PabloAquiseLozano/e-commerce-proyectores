@@ -10,7 +10,7 @@ export const Categories: Category[] = [
   {
     name: "Para Negocios y Presentaciones",
     url: `${initialUrl}&text=Deseo%20mas%20información%20sobre%20las%20controls%20por%20favor`,
-    image: "/images/businessproyector.jpg",
+    image: "/images/proyectorbusiness.jpg",
     gridType: "row-span-2 col-span-2",
   },
   {
@@ -22,13 +22,13 @@ export const Categories: Category[] = [
   {
     name: "4K y Full HD",
     url: `${initialUrl}&text=Deseo%20mas%20información%20sobre%20las%20plantas%20sakura%20por%20favor`,
-    image: "/images/proyectorhd.webp",
+    image: "/images/proyectorhd.jpg",
     gridType: "row-span-2 col-span-2",
   },
   {
     name: "VideoJuegos",
     url: `${initialUrl}&text=Deseo%20mas%20información%20sobre%20los%20helechos%20por%20favor`,
-    image: "/images/proyectorgamer.webp",
+    image: "/images/proyectorgamer.jpg",
     gridType: "row-span-2 col-span-2",
   },
   {
