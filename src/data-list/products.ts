@@ -303,7 +303,7 @@ export const Products: Product[] = [
     control: false,
     images: [
       "/images/sonyGTZ380.webp",
-      "/images/sonyGTZ380-2.webp",
+      "/images/sonyGTZ380-2.png",
       "/images/sonyGTZ380-3.jpg",
     ],
     link: `${hostingUrl}/products/sony-gtz380`,

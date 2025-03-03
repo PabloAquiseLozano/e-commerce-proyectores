@@ -45,7 +45,10 @@ export const FilterOptions = ({ filters, setQuery }: FilterOptionsProps) => {
   };
 
   return (
-    <div className="text-2xl flex flex-col gap-[1.5em]">
+    <div className="text-xl flex flex-col gap-[1.5em]">
+      <div className="text-2xl font-bold">
+        <h2>FILTRAR PRODUCTOS</h2>
+      </div>
       <div className="grid gap-[0.8em]">
         <span className="font-bold">
           Precio: &nbsp;<span>$ {filters.minPrice}</span>

@@ -1,16 +1,26 @@
 import { Products } from "@/data-list";
-import { ArrayParam, NumberParam, useQueryParams } from "use-query-params";
+import {
+  ArrayParam,
+  NumberParam,
+  StringParam,
+  useQueryParams,
+} from "use-query-params";
 import { WrapperContainer } from "@/components/ui/WrapperContainer.tsx";
 import { FilterOptions } from "@/pages/products/filterOptions.tsx";
-import { Select } from "antd";
 import { ProductCard } from "@/pages/products/ProductCard.tsx";
-import { isEmpty } from "lodash";
+import { SortOptions } from "@/pages/products/sortOptions.tsx";
+import { filterProducts, sortedProducts } from "@/utils";
+import { Pagination } from "antd";
+import { useMemo, useState } from "react";
 
 export const ProductsPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const [query, setQuery] = useQueryParams({
     category: ArrayParam,
     brand: ArrayParam,
     minPrice: NumberParam,
+    sortId: StringParam,
   });
 
   const filters = {
@@ -19,37 +29,19 @@ export const ProductsPage = () => {
     minPrice: query.minPrice || 0,
   };
 
-  const productsFiltered = (products: Product[]) => {
-    return products.filter((product) => {
-      return (
-        product.price >= filters.minPrice &&
-        (isEmpty(filters.brand) || filters.brand.includes(product.brand)) &&
-        (isEmpty(filters.category) ||
-          filters.category.includes(product.category))
-      );
-    });
+  const _sortOptions = {
+    sortId: query.sortId || "recommended",
   };
 
-  const filteredProducts = productsFiltered(Products);
+  const filteredProducts = filterProducts(Products, filters);
 
-  const sortByOptions = [
-    {
-      value: "minPrice",
-      label: "Precio más Bajo",
-    },
-    {
-      value: "maxPrice",
-      label: "Precio más Alto",
-    },
-    {
-      value: "brand",
-      label: "Marca",
-    },
-    {
-      value: "recommended",
-      label: "Recomendados",
-    },
-  ];
+  const newProducts = sortedProducts(filteredProducts, _sortOptions.sortId);
+
+  const paginationProducts = useMemo(() => {
+    const start = (currentPage - 1) * 12;
+    const end = start + 12;
+    return newProducts.slice(start, end);
+  }, [currentPage, newProducts]);
 
   return (
     <div className="w-full h-auto bg-gray-200">
@@ -59,16 +51,12 @@ export const ProductsPage = () => {
             <FilterOptions filters={filters} setQuery={setQuery} />
           </div>
           <div className="w-full flex flex-col gap-[1em] my-[2em] rounded-3xl">
-            <div className="w-full bg-white rounded-2xl p-[1em] gap-4 flex">
-              <span>Ordenar por:</span>
-              <Select
-                style={{ width: 150 }}
-                defaultValue="recommended"
-                options={sortByOptions}
-              />
+            <div className="w-full bg-white rounded-2xl p-[1em]">
+              <SortOptions setQuery={setQuery} sortOptions={_sortOptions} />
             </div>
+
             <div className="w-full grid autofill gap-[1.9em]">
-              {filteredProducts.map((fProduct, index) => (
+              {paginationProducts.map((fProduct, index) => (
                 <ProductCard
                   key={index}
                   title={fProduct.name}
@@ -78,6 +66,14 @@ export const ProductsPage = () => {
                   imageUrl={fProduct.images[0]}
                 />
               ))}
+            </div>
+            <div className="w-full flex justify-center">
+              <Pagination
+                current={currentPage}
+                pageSize={12}
+                total={Products.length}
+                onChange={(page) => setCurrentPage(page)}
+              />
             </div>
           </div>
         </div>
